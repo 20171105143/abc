@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var temp = 0
+    var temp: Double = 0
     var flag = 0
     @IBOutlet weak var okl: UITextField!
     
@@ -24,33 +24,33 @@ class ViewController: UIViewController {
     }
     @IBAction func BUTTON4(_ sender: Any) {
         temp =
-            Int(okl.text!)!
+            Double(okl.text!)!
         okl.text = ""
         flag = 1
     }
     @IBAction func button5(_ sender: Any) {
         if(flag == 1)
         {
-            var sum = 0
-            sum = temp + Int(okl.text!)!
+            var sum :Double = 0
+            sum = temp + Double(okl.text!)!
             okl.text = "\(sum)"
         }
         if(flag == 2)
         {
-            var sum1 = 0
-            sum1 = temp - Int(okl.text!)!
+            var sum1:Double = 0
+            sum1 = temp - Double(okl.text!)!
             okl.text = "\(sum1)"
         }
         if(flag == 3)
         {
-            var sum2 = 0
-            sum2 = temp * Int(okl.text!)!
+            var sum2:Double = 0
+            sum2 = temp * Double(okl.text!)!
             okl.text = "\(sum2)"
         }
         if(flag == 4)
         {
-            var sum3 = 0
-            sum3 = temp / Int(okl.text!)!
+            var sum3:Double = 0
+            sum3 = temp / Double(okl.text!)!
             okl.text = "\(sum3)"
         }
     }
@@ -84,21 +84,25 @@ class ViewController: UIViewController {
     
     @IBAction func button13(_ sender: Any) {
         temp =
-            Int(okl.text!)!
+            Double(okl.text!)!
         okl.text = ""
         flag = 2
     }
     @IBAction func button14(_ sender: Any) {
         temp =
-            Int(okl.text!)!
+            Double(okl.text!)!
         okl.text = ""
         flag = 3
     }
     @IBAction func button15(_ sender: Any) {
         temp =
-            Int(okl.text!)!
+            Double(okl.text!)!
         okl.text = ""
         flag = 4
+    }
+    
+    @IBAction func button(_ sender: Any) {
+        okl.text = okl.text! + "."
     }
     override func viewDidLoad() {
         super.viewDidLoad()
