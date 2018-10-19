@@ -9,10 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var temp: Double = 0
+    var temp: Double =                                        0
     var flag = 0
+    var war:Double = 0
     @IBOutlet weak var okl: UITextField!
-    
+    var bcr:Double = 0;
     @IBAction func BUTTON1(_ sender: Any) {
     okl.text = okl.text!+"1"
     }
@@ -52,6 +53,23 @@ class ViewController: UIViewController {
             var sum3:Double = 0
             sum3 = temp / Double(okl.text!)!
             okl.text = "\(sum3)"
+        }
+        if(flag == 5)
+        {
+            var sum4 :Double = 0
+            sum4 = temp / Double(okl.text!)!
+            okl.text = "\(sum4)"
+            do {
+                var sum4 :Double = 0
+                sum4 = pow(self.temp,Double(self.okl.text!)!)
+                self.okl.text = "\(sum4)"
+            }
+            if(flag == 6)
+            {
+                var sum5 :Double = 0
+                sum5 = sqrt(temp)
+                okl.text = "\(sum5)"
+            }
         }
     }
     @IBAction func button6(_ sender: Any) {
@@ -109,7 +127,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func button16(_ sender: Any) {
+        temp =
+            Double(okl.text!)!
+        okl.text = ""
+        flag = 5
+    }
     
+    @IBAction func button17(_ sender: Any) {
+        temp =
+            Double(okl.text!)!
+        okl.text = ""
+        flag = 6
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
